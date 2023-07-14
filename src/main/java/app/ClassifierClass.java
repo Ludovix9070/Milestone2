@@ -32,7 +32,7 @@ public class ClassifierClass {
         try{
             allLists = retWekaInfo.retrieveClassifiersEvaluation(projName);
         } catch(Exception e){
-
+            LOGGER.info("");
         }
 
 
