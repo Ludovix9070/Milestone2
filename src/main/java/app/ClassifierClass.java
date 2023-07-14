@@ -35,8 +35,6 @@ public class ClassifierClass {
 
         }
 
-        //allLists = retWekaInfo.retrieveClassifiersEvaluation(projName);
-
 
         evaluationFileAvg = new EvaluationFile(projName, allLists.getAvgEvaluationsList(), "avg");
         evaluationFileAvg.csvWrite(projName);

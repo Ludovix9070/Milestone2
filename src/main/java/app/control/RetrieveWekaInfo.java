@@ -52,15 +52,12 @@ public class RetrieveWekaInfo {
 		List<ClassifierEvaluation> smoteRandomForestList = new ArrayList<>();
 		List<ClassifierEvaluation> smoteNaiveBayesList = new ArrayList<>();
 		List<ClassifierEvaluation> smoteIBkList = new ArrayList<>();
-		//System.out.println(releaseIndex);
 
 		for(int index = 2; index < this.releaseIndex+1; index++){
 
-			System.out.println(index);
 			String completePath = this.path + index;
 			DataSource source1 = new DataSource(completePath + "/Train.arff");
 			DataSource source2 = new DataSource(completePath + "/Test.arff");
-			System.out.println(completePath);
 			Instances training = source1.getDataSet();
 			Instances testing = source2.getDataSet();
 
@@ -241,8 +238,6 @@ public class RetrieveWekaInfo {
 			} catch (Exception e){
 				LOGGER.info("");
 			}
-
-			//filteredTesting = Filter.useFilter(testing, smote);
 
 			numAttr = filteredTraining.numAttributes();
 			filteredTraining.setClassIndex(numAttr - 1);
